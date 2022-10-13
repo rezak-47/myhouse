@@ -24,3 +24,5 @@ docker exec -it nginx /bin/bash
 docker system prune -a --volumes (удалить все из докера)
 docker stop "id"
 docker run -d --rm --name web1 -p 8080:80 nginx
+docker run --name DB-mysql -e MYSQL_ROOT_PASSWORD=my-1234 -d mysql
+docker exec -it DB-mysql mysql -uroot -p
