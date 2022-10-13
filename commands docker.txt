@@ -26,3 +26,8 @@ docker stop "id"
 docker run -d --rm --name web1 -p 8080:80 nginx
 docker run --name DB-mysql -e MYSQL_ROOT_PASSWORD=my-1234 -d mysql
 docker exec -it DB-mysql mysql -uroot -p
+docker volume ls	
+docker run --name web01 -v /opt/nginx/data:/usr/share/nginx/html  -d -p 8080:80  nginx
+docker run --name web01 --rm -v web_data:/usr/share/nginx/html  -d -p 8080:80  nginx
+docker volume create infos
+docker volume rm infos
