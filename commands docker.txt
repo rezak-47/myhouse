@@ -1,0 +1,26 @@
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+docker ps
+docker ps -a ( когда запускался)
+docker rm "name" 
+docker images
+docker rmi "id"  (удалить image)
+docker pull "name" (скачать image)
+docker run
+docker run sleep 5 (секунды)
+docker run -d ubuntu sleep 5
+docker start "id" (перезапустить контейнер)
+docker pause "id"
+docker unpause "id"
+docker stop "id"
+docker kill "id"
+docker run --rm -d ubuntu sleep 900  ( что бы сразу удалялся контейнер)
+docker inspect 4c03bc91afc0
+docker stats
+docker logs "id"
+docker logs "id" -f (постоянно)
+docker exec -it nginx /bin/bash
+docker system prune -a --volumes (удалить все из докера)
+docker stop "id"
+docker run -d --rm --name web1 -p 8080:80 nginx

@@ -1,0 +1,70 @@
+ctrl+alt+f(1-6) - виртуальная консоль
+--help /man/info
+!! - последняя команда
+!48 - команда из history
+mkdir -p dir1/dir2/dir3 - создать папку в папке
+rmdir - удаление папки
+rm -rf - удалить папку и файл без подверждения
+cp -v dir_b/fileb . - копипаст в текущую директорию
+cp -vl file filelink - создание жесткой ссылки
+cp -vr dir_a dir_b - жесткая ссылка на директорию
+cp -va dir_a dir_b - тоже самое но с правами
+mv -v file15 dir_a - перемещение
+mv -v file1 newname - переименование
+mv -v dir_a dira -переименование
+ln -v filea samefile - создание жесткой ссылки
+ln -vs filea softlink - символическая ссылка
+ln -vs dir_c dirlink - символическая ссылка
+cat -n - нумерует
+tac - выводит с конца
+head -5 
+tail -5
+tail -n +35 /etc/passwd - ниже 35
+grep -v - исключить
+ls dir1 dir2 dir3 2> /dev/null - в черную дыру ошибки
+grep -rl bash /etc/ > filelist 2> error
+grep -rl bash /etc &> output - вывод ошибок и stdout
+~/.bashrc - здесь прописывать настройки и алиансы
+/etc/bashrc - для всех
+type ls - раскажет про программу + ключ -a
+ps -ef | less -S 
+watch - смотреть за промежуток 
+w - залогиненые юзеры
+nice -n 5 firefox - приоритет
+ps -el - посмотреть приоритет
+renice -n 10 pid - изменить приоритет
+wc -l /etc/passwd - кол-во строк
+sudo useradd user2
+sudo passwd user2
+su – user2 - окружение юзера
+su – user2 -с "touch file"
+visudo 
+which top - полный путь
+sudo useradd user4 -b /home/user/it -с "User Userovich" -g users -G wheel,user2
+sudo usermod user4  -aG wheel - добавить группу
+chmod -v go-r file4
+chmod +x file3
+chmod -v g-w file2
+---
++tmux+
+tmux new-session -s losst 
+
+    Ctrl+b c - создать новое окно;
+    Ctrl+b w - выбрать окно из списка;
+    Ctrl+b 0-9 - открыть окно по его номеру;
+    Ctrl+b , - переименовать текущее окно;
+    Ctrl+b % - разделить текущую панель по горизонтали;
+    Ctrl+b " - разделить текущую панель по вертикали;
+    Ctrl+b стрелка - перейти на панель, находящуюся в стороне, куда указывает стрелка;
+    Ctrl+b Ctrl+стрелка - изменить размер текущей панели;
+    Ctrl+b o - перейти на следующую панель;
+    Ctrl+b ; - переключаться между текущей и предыдущей панелью;
+    Ctrl+b x - закрыть текущую панель;
+    Ctrl+b [ - войти в режим копирования (подробнее ниже);
+    Ctrl+b ] - вставить из внутреннего буфера обмена tmux;
+    Ctrl+b d - отключится от текущей сессии;
+    Ctrl+b : - открыть командную строку.
+tmux ls - просмотр
+tmux attach -t losst - подключится
+======================
+netstat -tulpen
