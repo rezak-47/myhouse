@@ -31,3 +31,11 @@ docker run --name web01 -v /opt/nginx/data:/usr/share/nginx/html  -d -p 8080:80 
 docker run --name web01 --rm -v web_data:/usr/share/nginx/html  -d -p 8080:80  nginx
 docker volume create infos
 docker volume rm infos
+docker network ls
+docker network create mynet01
+docker network inspect mynet01
+docker network create -d bridge --subnet 192.168.10.0/24 --gateway 192.168.10.1 mynet192
+docker network rm mynet01
+docker run --rm -it --name cont1  nicolaka/netshoot /bin/bash
+docker run --rm -it --name cont2 --net mynet01  nicolaka/netshoot /bin/bash
+docker network connect mynet01 cont1 (вторая сеть)
