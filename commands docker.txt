@@ -39,3 +39,9 @@ docker network rm mynet01
 docker run --rm -it --name cont1  nicolaka/netshoot /bin/bash
 docker run --rm -it --name cont2 --net mynet01  nicolaka/netshoot /bin/bash
 docker network connect mynet01 cont1 (вторая сеть)
+docker network disconnect 39d2d8c5ee68c404ddbbde7130c9d4ca8828fb4494466cb5a648326e460156df cont1  (id сети в inspect)
+docker run --rm -it --name cont1 --net host  nicolaka/netshoot /bin/bash
+docker run --rm -it --name cont1 --net none  nicolaka/netshoot /bin/bash
+docker network create -d macvlan --subnet 192.168.66.0/24 --gateway 192.168.66.1 --ip-range 192.168.66.66/32 -o parent=ens33 Mymacvlan
+docker run --rm -it --name cont1 --net Mymacvlan  nicolaka/netshoot /bin/bash
+docker run --rm -it --name cont1 --net Mymacvlan --ip 192.168.66.55  nicolaka/netshoot /bin/bash
