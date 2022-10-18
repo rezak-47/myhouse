@@ -68,3 +68,5 @@ tmux ls - просмотр
 tmux attach -t losst - подключится
 ======================
 netstat -tulpen
+------------------------
+tar czfv postgres.tar.gz *.sql
