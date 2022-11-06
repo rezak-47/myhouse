@@ -45,3 +45,22 @@ docker run --rm -it --name cont1 --net none  nicolaka/netshoot /bin/bash
 docker network create -d macvlan --subnet 192.168.66.0/24 --gateway 192.168.66.1 --ip-range 192.168.66.66/32 -o parent=ens33 Mymacvlan
 docker run --rm -it --name cont1 --net Mymacvlan  nicolaka/netshoot /bin/bash
 docker run --rm -it --name cont1 --net Mymacvlan --ip 192.168.66.55  nicolaka/netshoot /bin/bash
+--
+docker build . (сбилдить image в текущей директории)
+docker build -t myimage:01 . (создать с именем)
+docker tag 0fca92f6442c mydocker:v01 (переименовать image)
+docker image inspect mydocker:v01 (посмотреть что в image)
+-
+dockerfile 
+	ENTRYPOINT ["echo"]  (постоянный параметр)
+    CMD ["my first docker"] (изменяемый)   
+docker run -it --rm --name mydocker myimage:04 Hello
+
+-------
+docker compose
+
+docker-compose --version
+docker compose version
+docker compose up -d
+docker compose stop
+docker compose logs -f 
