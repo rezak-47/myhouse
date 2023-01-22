@@ -82,4 +82,8 @@ rezak-47    ALL=(ALL:ALL) NOPASSWD: ALL
 ---------------
 https://forum.sys-adm.in/t/lvm/3146  - уменьшить LVM
 ------------------
-
+mkfs -t ext4 /dev/sdb
+e2label /dev/sdb DB 
+-------------------------------
+install postgres 13 centos7
+https://computingforgeeks.com/how-to-install-postgresql-13-on-centos-7/
