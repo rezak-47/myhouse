@@ -79,7 +79,7 @@ tar czfv postgres.tar.gz *.sql
 rezak-47    ALL=(ALL:ALL) NOPASSWD: ALL
 --------------
 /etc/ssh/sshd_config   	PermitRootLogin yes  ( для root ssh)
--------------
+---------------
 https://forum.sys-adm.in/t/lvm/3146  - уменьшить LVM
 ------------------
 
