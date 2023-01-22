@@ -70,3 +70,16 @@ tmux attach -t losst - подключится
 netstat -tulpen
 ------------------------
 tar czfv postgres.tar.gz *.sql
+-------------------
+ ssh-copy-id username@remote_host - скопировать ключ ssh
+--------------------
+ timeweb-backup ALL=(root) /bin/mount /root/backup.d  (  сможет запустить команду sudo mount /root/backup.d со своим паролем)
+ -----------------------
+ root@deb01:/etc/sudoers.d# cat rezak-47
+rezak-47    ALL=(ALL:ALL) NOPASSWD: ALL
+--------------
+/etc/ssh/sshd_config   	PermitRootLogin yes  ( для root ssh)
+-------------
+https://forum.sys-adm.in/t/lvm/3146  - уменьшить LVM
+------------------
+

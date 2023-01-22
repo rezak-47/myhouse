@@ -4,10 +4,10 @@ sudo sh get-docker.sh
 docker ps
 docker ps -a ( когда запускался)
 docker rm "name" 
-docker images
+docker images ( посмотреть Image)
 docker rmi "id"  (удалить image)
 docker pull "name" (скачать image)
-docker run
+docker run ( создать новый контейнер)
 docker run sleep 5 (секунды)
 docker run -d ubuntu sleep 5
 docker start "id" (перезапустить контейнер)
