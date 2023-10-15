@@ -87,5 +87,3 @@ e2label /dev/sdb DB
 -------------------------------
 install postgres 13 centos7
 https://computingforgeeks.com/how-to-install-postgresql-13-on-centos-7/
-
-test
